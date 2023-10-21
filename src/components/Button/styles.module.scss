@@ -1,15 +1,54 @@
 .button {
-  padding: 12px 16px;
+  display: inline-flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.1s;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  cursor: pointer;
+
+  &:focus {
+    outline: 2px solid var(--color-highlight);
+  }
 }
 
 .filled {
-  background-color: red;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  background: var(--color-primary);
+
+  &:hover {
+    background: var(--color-primary-dark);
+  }
 }
 
 .outlined {
-  border: 1px solid black;
+  color: var(--color-primary);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  border-color: var(--color-primary);
+
+  &:hover {
+    background: var(--color-highlight);
+  }
 }
 
 .text {
-  color: black;
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+
+  &:hover {
+    background: var(--color-highlight);
+  }
 }
