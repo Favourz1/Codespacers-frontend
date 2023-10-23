@@ -1,13 +1,13 @@
 import classes from "./styles.module.scss";
 
-interface Props extends React.ComponentProps<"button"> {
+export interface ButtonProps extends React.ComponentProps<"button"> {
   href?: string;
   variant?: "filled" | "outlined" | "text";
   icon?: JSX.Element;
   iconPlacement?: "start" | "end";
 }
 
-export default function Button(props: Props) {
+export default function Button(props: ButtonProps) {
   const {
     href,
     variant = "text",
@@ -28,6 +28,11 @@ export default function Button(props: Props) {
     </button>
   );
 
-  if (href) return <a href={href}>{component}</a>;
+  if (href)
+    return (
+      <a href={href} className={classes.link_wrapper}>
+        {component}
+      </a>
+    );
   return component;
 }

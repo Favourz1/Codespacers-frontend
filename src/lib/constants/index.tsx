@@ -6,5 +6,10 @@ export const ROUTE_KEYS = {
   HOME: "/",
   LOGIN: "/login",
   SIGNUP: "/signup",
-  DASHBOARD: "/dashboard",
+  AUTH_ROOT: "/u",
+  DASHBOARD: "/u/dashboard",
+  BUDGET: "/u/budget",
+  SUBSCRIPTIONS: "/u/subscriptions",
+  EXPENSE_RECORDS: "/u/expense-records",
+  TRACK_EXPENDITURE: "/u/track-expenditure",
 };

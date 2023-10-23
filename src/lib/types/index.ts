@@ -9,3 +9,9 @@ export interface Auth {
   user: User;
   setUser: React.Dispatch<React.SetStateAction<User>>;
 }
+
+export interface MenuItem {
+  path: string;
+  label: string;
+  icon: JSX.Element;
+}
