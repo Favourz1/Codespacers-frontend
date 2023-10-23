@@ -1,6 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 *,
 *::before,
@@ -14,6 +13,7 @@
   --color-primary: #163a5f;
   --color-primary-dark: #112c47;
   --color-highlight: #f8f8f8;
+  --color-border: #ebebeb;
   font-family: "Roboto", sans-serif;
 }
 
