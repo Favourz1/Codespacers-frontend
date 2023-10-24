@@ -8,6 +8,8 @@ export default {
         dark: "rgb(17, 44, 71)",
         highlight: "rgb(248, 248, 248)",
         border: "rgb(235, 235, 235)",
+        primaryColor: "Var(--color-primary)",
+        primaryAsh: "Var(--color-ash)",
       },
     },
   },

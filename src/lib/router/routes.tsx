@@ -9,6 +9,8 @@ import Budget from "@/pages/budget";
 import ExpenseRecords from "@/pages/expense-records";
 import Subscriptions from "@/pages/subscriptions";
 import TrackExpenditure from "@/pages/track-expenditure";
+import Home from "@/pages/Home";
+import HomeLayout from "@/components/HomeLayout";
 
 const PRIVATE_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.DASHBOARD, element: <Dashboard /> },
@@ -19,7 +21,7 @@ const PRIVATE_ROUTES: RouteObject[] = [
 ];
 
 const PUBLIC_ROUTES: RouteObject[] = [
-  { path: ROUTE_KEYS.HOME, element: <h1>Home</h1> },
+  { path: ROUTE_KEYS.HOME, element: <Home /> },
   { path: ROUTE_KEYS.LOGIN, element: <Login /> },
   { path: ROUTE_KEYS.SIGNUP, element: <h1>Sign up</h1> },
 ];
@@ -29,7 +31,7 @@ const ROUTES: RouteObject[] = [
     path: ROUTE_KEYS.HOME,
     element: (
       <PublicRoutes>
-        <Outlet />
+        <HomeLayout />
       </PublicRoutes>
     ),
     children: PUBLIC_ROUTES,
