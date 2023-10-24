@@ -108,7 +108,7 @@ const HomeLayout = () => {
                     </div>
                 </div>
             </footer>
-            <div className="flex flex-wrap items-center md:justify-between justify-center pt-6 bg-white">
+            <div className="flex flex-wrap items-center md:justify-between justify-center py-3 bg-white">
                 <div className="w-full md:w-4/12 px-4 mx-auto text-center">
                     <div className="text-sm text-black font-medium py-1">
                         © {new Date().getFullYear()} Built by Team Favourz. All rights reserved.

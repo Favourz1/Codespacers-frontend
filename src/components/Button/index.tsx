@@ -1,6 +1,7 @@
 import classes from "./styles.module.scss";
 
 export interface ButtonProps extends React.ComponentProps<"button"> {
+  customClass?: string;
   href?: string;
   variant?: "filled" | "outlined" | "text";
   icon?: JSX.Element;
@@ -9,6 +10,7 @@ export interface ButtonProps extends React.ComponentProps<"button"> {
 
 export default function Button(props: ButtonProps) {
   const {
+    customClass,
     href,
     variant = "text",
     icon,
@@ -16,7 +18,7 @@ export default function Button(props: ButtonProps) {
     ...domProps
   } = props;
 
-  const className = [classes.button, classes[variant], domProps.className].join(
+  const className = [classes.button, classes[variant], domProps.className, customClass].join(
     " "
   );
 
