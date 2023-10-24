@@ -7,16 +7,19 @@ import SearchIcon from "@/assets/icons/search-icon.svg";
 import NotificationIcon from "@/assets/icons/notification-icon.svg";
 import HelpIcon from "@/assets/icons/help-icon.svg";
 import DashboardIcon from "@/assets/icons/dashboard-icon.svg";
+import DashboardActiveIcon from "@/assets/icons/dashboard-active-icon.svg";
 import BudgetIcon from "@/assets/icons/budget-icon.svg";
+import BudgetActiveIcon from "@/assets/icons/budget-active-icon.svg";
 import SubscriptionsIcon from "@/assets/icons/subscriptions-icon.svg";
+import SubscriptionsActiveIcon from "@/assets/icons/subscriptions-active-icon.svg";
 import ExpenseRecordsIcon from "@/assets/icons/expense-records-icon.svg";
+import ExpenseRecordsActiveIcon from "@/assets/icons/expense-records-active-icon.svg";
 import TrackExpenditureIcon from "@/assets/icons/track-expenditures-icon.svg";
+import TrackExpenditureActiveIcon from "@/assets/icons/track-expenditures-active-icon.svg";
 import { ROUTE_KEYS } from "@/lib/constants";
 
 export default function Layout() {
   const { pathname } = useLocation();
-
-  console.log("pathname is", pathname);
 
   const handleSearch: React.FormEventHandler = (e) => {
     e.preventDefault();
@@ -35,7 +38,7 @@ export default function Layout() {
               key={item.path}
               href={item.path}
               label={item.label}
-              icon={item.icon}
+              icon={pathname.includes(item.path) ? item.activeIcon : item.icon}
               active={pathname.includes(item.path)}
             />
           ))}
@@ -63,21 +66,34 @@ export default function Layout() {
 }
 
 const MENU_ITEMS: MenuItem[] = [
-  { path: ROUTE_KEYS.DASHBOARD, label: "Dashboard", icon: <DashboardIcon /> },
-  { path: ROUTE_KEYS.BUDGET, label: "Budget", icon: <BudgetIcon /> },
+  {
+    path: ROUTE_KEYS.DASHBOARD,
+    label: "Dashboard",
+    icon: <DashboardIcon />,
+    activeIcon: <DashboardActiveIcon />,
+  },
+  {
+    path: ROUTE_KEYS.BUDGET,
+    label: "Budget",
+    icon: <BudgetIcon />,
+    activeIcon: <BudgetActiveIcon />,
+  },
   {
     path: ROUTE_KEYS.SUBSCRIPTIONS,
     label: "Subscriptions",
     icon: <SubscriptionsIcon />,
+    activeIcon: <SubscriptionsActiveIcon />,
   },
   {
     path: ROUTE_KEYS.EXPENSE_RECORDS,
     label: "Expense Records",
     icon: <ExpenseRecordsIcon />,
+    activeIcon: <ExpenseRecordsActiveIcon />,
   },
   {
     path: ROUTE_KEYS.TRACK_EXPENDITURE,
     label: "Track Expenditure",
     icon: <TrackExpenditureIcon />,
+    activeIcon: <TrackExpenditureActiveIcon />,
   },
 ];

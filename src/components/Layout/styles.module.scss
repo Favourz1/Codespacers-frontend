@@ -1,9 +1,13 @@
 .wrapper {
+  position: relative;
   display: flex;
   align-items: flex-start;
 }
 
 .aside {
+  position: sticky;
+  top: 0;
+  left: 0;
   flex-shrink: 0;
   height: 100vh;
   display: flex;
@@ -36,12 +40,16 @@
 }
 
 .header_main {
+  position: relative;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   height: 82.4px;
   display: flex;
   align-items: center;
@@ -49,6 +57,7 @@
   gap: 16px;
   padding: 16px 24px;
   border-bottom: 1px solid var(--color-border);
+  background-color: white;
 }
 
 .search_form {
@@ -89,4 +98,5 @@
 
 .main {
   padding: 24px;
+  background-color: #fbfbfb;
 }
