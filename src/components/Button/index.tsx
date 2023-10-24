@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classes from "./styles.module.scss";
 
 export interface ButtonProps extends React.ComponentProps<"button"> {
@@ -30,9 +31,9 @@ export default function Button(props: ButtonProps) {
 
   if (href)
     return (
-      <a href={href} className={classes.link_wrapper}>
+      <Link to={href} className={classes.link_wrapper}>
         {component}
-      </a>
+      </Link>
     );
   return component;
 }

@@ -14,4 +14,5 @@ export interface MenuItem {
   path: string;
   label: string;
   icon: JSX.Element;
+  activeIcon: JSX.Element;
 }
