@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryColor: "Var(--color-primary)"
+        primaryColor: "Var(--color-primary)",
+        primaryAsh: "Var(--color-ash)",
       }
     },
   },

@@ -87,7 +87,7 @@ const HomeLayout = () => {
                                     <span className="block uppercase  text-sm font-semibold mb-2">Get in Touch</span>
                                     <ul className="space-y-2 list-unstyled">
                                         <li>
-                                            <a className="flex items-center pb-2 text-xs" href="">No 1, Team Favourz Street. Bannana Island. Lagos State</a>
+                                            <a className="flex items-center pb-2 text-xs" href="">No 1, Team Favourz Street. Banana Island. Lagos State</a>
                                         </li>
                                         <li>
                                             <a className="flex items-center pb-2 text-xs max-w-[35%] md:max-w-full" href="">hello@budgetify.com</a>
