@@ -4,7 +4,7 @@ import heroWomanImg from "@/assets/pngs/hero-woman.png"
 const Home = () => {
     return (
         <div>
-            <section className="py-5 min-h-screen bg-[##8E8E8E]">
+            <section className="py-5 min-h-screen bg-[#E8EBEF]">
                 <div className="container mx-auto px-3">
                     <div className="flex flex-col justify-center items-center">
                         <div className="flex flex-col justify-center items-center max-w-[70%] pt-10 pb-5 text-[#1d1d1d] ">
