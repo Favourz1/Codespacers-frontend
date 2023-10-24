@@ -11,7 +11,7 @@ import "@/assets/styles/main.css"
 const HomeLayout = () => {
     return (
         <div>
-            <header className="py-2 md:py-5" >
+            <header className="py-2" >
                 <nav className="container mx-auto flex justify-between items-center px-3">
                     <a href="#" className="mr-8">
                         <BudgetifyBlueLogo />

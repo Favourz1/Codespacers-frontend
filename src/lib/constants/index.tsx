@@ -1,6 +1,7 @@
 import FriendsIcon from "@/assets/icons/friends.svg"
 import SaveIcon from "@/assets/icons/save.svg"
 import SecurityIcon from "@/assets/icons/security.svg"
+import ToolsIcon from "@/assets/icons/tools.svg"
 
 
 
@@ -56,5 +57,32 @@ export const UNIQUE_FEATURES = [
     headingText: "Security Measures",
     subText: "Rest easy with Budgetify's robust security measures. Your financial data is protected through encryption and industry-standard practices, ensuring your privacy is a top priority.",
     icon: <SecurityIcon />
+  },
+]
+
+export const HOW_IT_WORKS = [
+  {
+    id: 1,
+    headingText: "Sign Up",
+    subText: "Begin your journey to financial control by signing up for a budgetify account. It’s quick, easy and free. Just enter your details to get started.",
+    icon: <ToolsIcon />
+  },
+  {
+    id: 2,
+    headingText: "Track Your Expenses",
+    subText: "Start by creating a budget that aligns with your financial goals. You can set spending limits for various categories such as groceries, entertainment, and bills.",
+    icon: <ToolsIcon />
+  },
+  {
+    id: 3,
+    headingText: "Monitor Your Progress",
+    subText: "Record your daily expenses effortlessly. Whenever you make a purchase, simply log it into the app. Categorize your expenses to see where your money is going.",
+    icon: <ToolsIcon />
+  },
+  {
+    id: 4,
+    headingText: "Stay On Budget",
+    subText: "With Budgetify. you will receive alerts and insights to help you stay within your budget. Make informed decisions and watch your goals become a reality.",
+    icon: <ToolsIcon />
   },
 ]

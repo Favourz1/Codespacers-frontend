@@ -1,8 +1,9 @@
 import Button from "@/components/Button"
 import heroWomanImg from "@/assets/pngs/hero-woman.png"
 import whoWeAreImg from "@/assets/pngs/who-we-are-girl.png"
+import howItWorksImg from "@/assets/pngs/how-it-works-lady.png"
 import ChevronRight from "@/assets/icons/chevron-right.svg"
-import { UNIQUE_FEATURES } from "@/lib/constants"
+import { HOW_IT_WORKS, UNIQUE_FEATURES } from "@/lib/constants"
 const Home = () => {
     return (
         <div>
@@ -45,7 +46,7 @@ const Home = () => {
                         <div className="grid grid-cols-2 gap-12">
                             {
                                 UNIQUE_FEATURES.map(item => (
-                                    <div key={item.id} className="flex items-center rounded-lg shadow-md gap-[10px] p-5">
+                                    <div key={item.id} className="flex items-center rounded-lg shadow-md gap-[10px] p-5 transition-all hover:scale-[1.02]">
                                         {item.icon}
                                         <div className="space-y-2">
                                             <div className="text-xl font-medium">{item.headingText}</div>
@@ -56,6 +57,37 @@ const Home = () => {
                             }
 
                         </div>
+                    </div>
+                </div>
+            </section>
+            {/* How it works */}
+            <section className="py-8">
+                <div className="container mx-auto px-3">
+                    <div className="flex flex-col">
+                        <div className="max-w-[50%] justify-center items-center text-center mx-auto mb-5">
+                            <div className="text-3xl text-primaryColor font-semibold">How it Works</div>
+                            <p className="text-primaryAsh">These are the basic steps to get started with Budgetify.</p>
+                        </div>
+                        <div className="flex flex-col md:flex-row">
+                        <div className="flex flex-col justify-center w-full md:w-[40%] space-y-5">
+                        <div className="grid grid-cols-2 gap-12">
+                            {
+                                HOW_IT_WORKS.map(item => (
+                                    <div key={item.id} className="flex flex-col rounded-lg shadow-md gap-[10px] p-5 transition-all hover:scale-[1.02]">
+                                        {item.icon}
+                                        <div className="space-y-2">
+                                            <div className="text-xl font-medium">{item.headingText}</div>
+                                            <div className="text-primaryAsh text-sm">{item.subText}</div>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                        </div>
+                        <div className="w-full md:w-[60%] flex items-center relative">
+                            <img className="justify-self-end" src={howItWorksImg} alt="" />
+                        </div>
+                    </div>
                     </div>
                 </div>
             </section>
