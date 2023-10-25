@@ -18,17 +18,17 @@ const AuthLayout = () => {
             <BudgetifyWhiteLogo />
           </Link>
           <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center px-5 py-3 bg-white rounded-lg gap-4 w-[48%]">
+            <div className="flex items-center px-5 py-3 bg-white rounded-lg gap-4 w-[48%] whitespace-nowrap">
               <FriendsIcon />{" "}
               <span className=" font-medium">User-Friendly</span>
             </div>
-            <div className="flex items-center px-5 py-3 bg-white rounded-lg gap-4 w-[48%]">
+            <div className="flex items-center px-5 py-3 bg-white rounded-lg gap-4 w-[48%] whitespace-nowrap">
               <FriendsIcon />{" "}
               <span className=" font-medium">Budget Managment</span>
             </div>
           </div>
 
-          <div className="flex items-center self-center px-5 py-3 bg-white rounded-lg gap-4 w-[48%]">
+          <div className="flex items-center self-center px-5 py-3 bg-white rounded-lg gap-4 w-[48%] whitespace-nowrap">
             <FriendsIcon />{" "}
             <span className=" font-medium">Expense Tracking</span>
           </div>
