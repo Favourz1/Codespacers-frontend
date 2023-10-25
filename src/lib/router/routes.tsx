@@ -1,16 +1,21 @@
-import { Outlet, RouteObject } from "react-router-dom";
+import { RouteObject } from "react-router-dom";
 import PublicRoutes from "./PublicRoutes";
 import PrivateRoutes from "./PrivateRoutes";
 import Layout from "@/components/Layout";
 import { ROUTE_KEYS } from "@/lib/constants";
 import Dashboard from "@/pages/dashboard";
-import Login from "@/pages/login";
+import Login from "@/pages/Login";
 import Budget from "@/pages/budget";
 import ExpenseRecords from "@/pages/expense-records";
 import Subscriptions from "@/pages/subscriptions";
 import TrackExpenditure from "@/pages/track-expenditure";
 import Home from "@/pages/Home";
 import HomeLayout from "@/components/HomeLayout";
+import AuthLayout from "@/components/AuthLayout";
+import Signup from "@/pages/Signup";
+import ForgotPassword from "@/pages/ForgotPassword";
+import About from "@/pages/About";
+import Error404 from "@/components/Error404";
 
 const PRIVATE_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.DASHBOARD, element: <Dashboard /> },
@@ -20,10 +25,14 @@ const PRIVATE_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.TRACK_EXPENDITURE, element: <TrackExpenditure /> },
 ];
 
+const AUTH_ROUTES: RouteObject[] = [
+  { path: ROUTE_KEYS.LOGIN, element: <Login /> },
+  { path: ROUTE_KEYS.SIGNUP, element: <Signup /> },
+  { path: ROUTE_KEYS.FORGOT_PASSWORD, element: <ForgotPassword /> },
+];
 const PUBLIC_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.HOME, element: <Home /> },
-  { path: ROUTE_KEYS.LOGIN, element: <Login /> },
-  { path: ROUTE_KEYS.SIGNUP, element: <h1>Sign up</h1> },
+  { path: ROUTE_KEYS.ABOUT, element: <About /> },
 ];
 
 const ROUTES: RouteObject[] = [
@@ -37,6 +46,15 @@ const ROUTES: RouteObject[] = [
     children: PUBLIC_ROUTES,
   },
   {
+    path: ROUTE_KEYS.ONBOARDING,
+    element: (
+      <PrivateRoutes>
+        <AuthLayout />
+      </PrivateRoutes>
+    ),
+    children: AUTH_ROUTES,
+  },
+  {
     path: ROUTE_KEYS.AUTH_ROOT,
     element: (
       <PrivateRoutes>
@@ -47,7 +65,7 @@ const ROUTES: RouteObject[] = [
   },
   {
     path: "*",
-    element: <h1>Page not found</h1>,
+    element: <Error404 />,
   },
 ];
 

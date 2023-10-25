@@ -19,9 +19,12 @@ export default function Button(props: ButtonProps) {
     ...domProps
   } = props;
 
-  const className = [classes.button, classes[variant], domProps.className, customClass].join(
-    " "
-  );
+  const className = [
+    classes.button,
+    classes[variant],
+    domProps.className,
+    customClass,
+  ].join(" ");
 
   const component = (
     <button className={className} {...domProps}>
