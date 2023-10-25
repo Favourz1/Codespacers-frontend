@@ -11,6 +11,7 @@ import Subscriptions from "@/pages/subscriptions";
 import TrackExpenditure from "@/pages/track-expenditure";
 import Home from "@/pages/Home";
 import HomeLayout from "@/components/HomeLayout";
+import AuthLayout from "@/components/AuthLayout";
 
 const PRIVATE_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.DASHBOARD, element: <Dashboard /> },
@@ -20,10 +21,12 @@ const PRIVATE_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.TRACK_EXPENDITURE, element: <TrackExpenditure /> },
 ];
 
-const PUBLIC_ROUTES: RouteObject[] = [
-  { path: ROUTE_KEYS.HOME, element: <Home /> },
+const AUTH_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.LOGIN, element: <Login /> },
   { path: ROUTE_KEYS.SIGNUP, element: <h1>Sign up</h1> },
+];
+const PUBLIC_ROUTES: RouteObject[] = [
+  { path: ROUTE_KEYS.HOME, element: <Home /> },
 ];
 
 const ROUTES: RouteObject[] = [
@@ -35,6 +38,15 @@ const ROUTES: RouteObject[] = [
       </PublicRoutes>
     ),
     children: PUBLIC_ROUTES,
+  },
+  {
+    path: ROUTE_KEYS.ONBOARDING,
+    element: (
+      <PrivateRoutes>
+        <AuthLayout />
+      </PrivateRoutes>
+    ),
+    children: AUTH_ROUTES,
   },
   {
     path: ROUTE_KEYS.AUTH_ROOT,

@@ -4,8 +4,9 @@ export const STORAGE_KEYS = {
 
 export const ROUTE_KEYS = {
   HOME: "/",
-  LOGIN: "/login",
-  SIGNUP: "/signup",
+  ONBOARDING: "/onboarding",
+  LOGIN: "/onboarding/login",
+  SIGNUP: "/onboarding/signup",
   AUTH_ROOT: "/u",
   DASHBOARD: "/u/dashboard",
   BUDGET: "/u/budget",
