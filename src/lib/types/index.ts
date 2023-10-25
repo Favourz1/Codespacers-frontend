@@ -16,3 +16,13 @@ export interface MenuItem {
   icon: JSX.Element;
   activeIcon: JSX.Element;
 }
+
+export interface LoginData {
+  email: string;
+  password: string;
+}
+
+export interface Pagination {
+  length: number;
+  page: number;
+}
