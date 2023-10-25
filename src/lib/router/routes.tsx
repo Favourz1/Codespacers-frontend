@@ -15,7 +15,7 @@ import Signup from "@/pages/Signup";
 import ForgotPassword from "@/pages/ForgotPassword";
 import About from "@/pages/About";
 import Error404 from "@/components/Error404";
-import Login from "@/pages/login";
+import Login from "@/pages/Login";
 
 const PRIVATE_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.DASHBOARD, element: <Dashboard /> },
