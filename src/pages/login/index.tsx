@@ -4,6 +4,19 @@ import { STORAGE_KEYS } from "@/lib/constants";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BudgetifyBlueLogo from "@/assets/icons/budgetify-logo-blue.svg";
+// import axios from "axios";
+// import { useForm } from "react-hook-form";
+// import { yupResolver } from "@hookform/resolvers/yup";
+// import * as yup from "yup";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+
+// const schema = yup.object().shape({
+//   first_name: yup.string().trim().required("First Name is required"),
+//   email: yup.string().email().trim().required(),
+//   phone_number: yup.string().min(10, "Phone number must be at least 10 digits"),
+//   message: yup.string().trim().required(),
+// });
 
 export default function Login() {
   useEffect(() => {
@@ -50,7 +63,10 @@ export default function Login() {
               <Input type="checkbox" name="remember_password" label="" />
               <span>Remember Password</span>
             </div>
-            <Link to="" className="text-red-400">
+            <Link
+              to="/onboarding/forgot-password"
+              className="text-red-400 hover:underline"
+            >
               Forgot Password
             </Link>
           </div>

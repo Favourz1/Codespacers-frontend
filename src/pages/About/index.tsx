@@ -13,10 +13,11 @@ const About = () => {
                 About Us
               </div>
               <p className="text-primaryAsh">
-                We help you set budgets, track expenses, manage categories and
-                achieve your financial goals with our intuitive budgeting app.
-                Sign up today with Budgetify which allows you to manage your
-                money effectively.
+                The expense tracker web app is to simplify financial management
+                for users by providing an intuitive platform for effortless
+                input and tracking of expenses, budgets, and income. We aim to
+                empower individuals to take control of their finances, make
+                informed spending decisions, and achieve their financial goals
               </p>
             </div>
             <div className="w-full md:w-[60%] flex items-center relative my-5 md:my-0">
@@ -34,8 +35,12 @@ const About = () => {
                 Our Vision
               </div>
               <p className="text-primaryAsh">
-                We help you set budgets, track expenses, manage categories and
-                achieve your financial goals with our unique features.
+                Our vision is to become the go-to solution for individuals
+                seeking a hassle-free approach to managing their finances. We
+                envision a future where everyone, regardless of their financial
+                expertise, can confidently navigate their income, expenses, and
+                budgets, leading to greater financial stability and peace of
+                mind.
               </p>
             </div>
             <div className="w-full md:w-[60%] flex items-center relative my-5 md:my-0">
@@ -52,13 +57,18 @@ const About = () => {
               <img src={howItWorksImg} alt="" />
             </div>
             <div className="flex flex-col justify-center w-full md:w-[60%] space-y-5">
-              <div className="mx-0 md:mx-auto max-w-full md:max-w-[50%]">
+              <div className="mx-0 md:mx-auto max-w-full ">
                 <div className="text-3xl text-[#1D1D1D] font-semibold">
                   Our Mission
                 </div>
                 <p className="text-primaryAsh">
-                  We help you set budgets, track expenses, manage categories and
-                  achieve your financial goals with our unique features.
+                  Our mission is to create a user-friendly and efficient expense
+                  tracker that not only eases the burden of financial management
+                  but also fosters financial literacy and responsible spending
+                  habits. We are committed to providing a seamless experience,
+                  enabling users to monitor their budgets, track monthly
+                  expenses, categorize spending, and manage subscriptions with
+                  utmost simplicity.
                 </p>
               </div>
             </div>
