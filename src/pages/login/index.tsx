@@ -1,15 +1,9 @@
 import Button from "@/components/Button";
 import Input from "@/components/Input";
-import { STORAGE_KEYS } from "@/lib/constants";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BudgetifyBlueLogo from "@/assets/icons/budgetify-logo-blue.svg";
 
 export default function Login() {
-  useEffect(() => {
-    if (window) localStorage.setItem(STORAGE_KEYS.TOKEN, "token");
-  }, []);
-
   return (
     <>
       <span className="block md:hidden mb-[100px]">

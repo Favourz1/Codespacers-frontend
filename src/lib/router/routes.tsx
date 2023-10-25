@@ -4,7 +4,6 @@ import PrivateRoutes from "./PrivateRoutes";
 import Layout from "@/components/Layout";
 import { ROUTE_KEYS } from "@/lib/constants";
 import Dashboard from "@/pages/dashboard";
-import Login from "@/pages/Login";
 import Budget from "@/pages/budget";
 import ExpenseRecords from "@/pages/expense-records";
 import Subscriptions from "@/pages/subscriptions";
@@ -16,6 +15,7 @@ import Signup from "@/pages/Signup";
 import ForgotPassword from "@/pages/ForgotPassword";
 import About from "@/pages/About";
 import Error404 from "@/components/Error404";
+import Login from "@/pages/login";
 
 const PRIVATE_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.DASHBOARD, element: <Dashboard /> },
