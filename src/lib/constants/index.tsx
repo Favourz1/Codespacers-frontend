@@ -4,6 +4,7 @@ export const STORAGE_KEYS = {
 
 export const ROUTE_KEYS = {
   HOME: "/",
+  ABOUT: "/about",
   ONBOARDING: "/onboarding",
   LOGIN: "/onboarding/login",
   SIGNUP: "/onboarding/signup",

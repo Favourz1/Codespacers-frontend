@@ -14,6 +14,7 @@ import HomeLayout from "@/components/HomeLayout";
 import AuthLayout from "@/components/AuthLayout";
 import Signup from "@/pages/Signup";
 import ForgotPassword from "@/pages/ForgotPassword";
+import About from "@/pages/About";
 
 const PRIVATE_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.DASHBOARD, element: <Dashboard /> },
@@ -30,6 +31,7 @@ const AUTH_ROUTES: RouteObject[] = [
 ];
 const PUBLIC_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.HOME, element: <Home /> },
+  { path: ROUTE_KEYS.ABOUT, element: <About /> },
 ];
 
 const ROUTES: RouteObject[] = [
