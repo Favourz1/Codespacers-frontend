@@ -78,12 +78,12 @@ const HomeLayout = () => {
                   </span>
                   <ul className="space-y-2 list-unstyled mb-2">
                     <li>
-                      <a
+                      <Link
+                        to="/about"
                         className="hover:underline hover:underline-offset-1 block pb-2 text-xs"
-                        href=""
                       >
                         About Us
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <a
