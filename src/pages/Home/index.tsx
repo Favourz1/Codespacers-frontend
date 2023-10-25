@@ -4,7 +4,7 @@ import whoWeAreImg from "@/assets/pngs/who-we-are-girl.png"
 import howItWorksImg from "@/assets/pngs/how-it-works-lady.png"
 import bannerImg from "@/assets/pngs/homepage-banner.png"
 import ChevronRight from "@/assets/icons/chevron-right.svg"
-import { FAQS, HOW_IT_WORKS, UNIQUE_FEATURES } from "@/lib/constants"
+import { FAQS, HOW_IT_WORKS, UNIQUE_FEATURES } from "./data"
 const Home = () => {
     return (
         <div>
