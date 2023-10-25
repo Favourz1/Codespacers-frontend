@@ -6,7 +6,7 @@ import FriendsIcon from "@/assets/icons/friends.svg";
 const AuthLayout = () => {
   return (
     <div className="container mx-auto gap-5 flex items-center min-h-screen">
-      <div className="hidden md:flex flex-col w-[45%]">
+      <div className="hidden lg:flex flex-col w-[45%]">
         <div
           className="flex flex-col p-6 rounded-3xl bg-primaryColor"
           style={{
@@ -36,7 +36,7 @@ const AuthLayout = () => {
           <img src={authImg} alt="" />
         </div>
       </div>
-      <div className="flex flex-col items-center w-full md:w-[55%]">
+      <div className="flex flex-col items-center w-full lg:w-[55%] py-6">
         <Outlet />
       </div>
     </div>
