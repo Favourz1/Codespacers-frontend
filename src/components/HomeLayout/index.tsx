@@ -5,10 +5,11 @@ import instagram from "@/assets/pngs/Instagram.png";
 import linkedin from "@/assets/pngs/LinkedIn.png";
 import x from "@/assets/pngs/x.png";
 import Button from "../Button";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import "@/assets/styles/main.css";
 
 const HomeLayout = () => {
+  const location = useLocation();
   return (
     <div>
       <header className="py-2 bg-[#E8EBEF]">
@@ -18,17 +19,33 @@ const HomeLayout = () => {
             {/* <img src={budgetifyBlueLogo} alt="Budgetify Logo" /> */}
           </a>
           <ul className="hidden md:flex items-center space-x-2">
-            <li className="pt-2">
-              <a href="#">Home</a>
+            <li
+              className={`pt-2 ${
+                location.pathname === "/" ? "font-medium" : ""
+              }`}
+            >
+              <Link to="/">Home</Link>
             </li>
-            <li className="pt-2">
-              <a href="#">About</a>
+            <li
+              className={`pt-2 ${
+                location.pathname === "/about" ? "font-medium" : ""
+              }`}
+            >
+              <Link to="/about">About</Link>
             </li>
-            <li className="pt-2">
-              <a href="#">Features</a>
+            <li
+              className={`pt-2 ${
+                location.pathname === "" ? "font-medium" : ""
+              }`}
+            >
+              <Link to="">Features</Link>
             </li>
-            <li className="pt-2">
-              <a href="#">FAQs</a>
+            <li
+              className={`pt-2 ${
+                location.pathname === "" ? "font-medium" : ""
+              }`}
+            >
+              <Link to="">FAQs</Link>
             </li>
           </ul>
           <div className="flex items-center space-x-3">

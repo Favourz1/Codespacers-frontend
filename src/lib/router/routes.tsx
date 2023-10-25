@@ -15,6 +15,7 @@ import AuthLayout from "@/components/AuthLayout";
 import Signup from "@/pages/Signup";
 import ForgotPassword from "@/pages/ForgotPassword";
 import About from "@/pages/About";
+import Error404 from "@/components/Error404";
 
 const PRIVATE_ROUTES: RouteObject[] = [
   { path: ROUTE_KEYS.DASHBOARD, element: <Dashboard /> },
@@ -64,7 +65,7 @@ const ROUTES: RouteObject[] = [
   },
   {
     path: "*",
-    element: <h1>Page not found</h1>,
+    element: <Error404 />,
   },
 ];
 
