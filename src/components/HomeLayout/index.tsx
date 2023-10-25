@@ -3,7 +3,7 @@ import BudgetifyWhiteLogo from "@/assets/icons/budgetify-logo-white.svg";
 import facebook from "@/assets/pngs/Facebook.png";
 import instagram from "@/assets/pngs/Instagram.png";
 import linkedin from "@/assets/pngs/LinkedIn.png";
-import x from "@/assets/pngs/x.png";
+import x from "@/assets/pngs/X.png";
 import Button from "../Button";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import "@/assets/styles/main.css";
