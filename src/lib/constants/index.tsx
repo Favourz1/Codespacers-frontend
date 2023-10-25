@@ -86,3 +86,26 @@ export const HOW_IT_WORKS = [
     icon: <ToolsIcon />
   },
 ]
+
+export const FAQS = [
+  {
+    id: 1,
+    headingText: "How do I add an expense to my budget?",
+    subText: "To add expense to your budget, log in to your Budgetify account and navigate to the “Expense Tracking” session. Click on the “Add Expense” button and fill in the details. Click “save” and the expense will be recorded in your budget."
+  },
+  {
+    id: 2,
+    headingText: "How can i track my income?",
+    subText: "We provide you with great data analysis tool inline with our unique features that gives you detailed breakdown of how all your expenses occured."
+  },
+  {
+    id: 3,
+    headingText: "How can i set up multiple budgets?",
+    subText: "Through our budget category feature. You will find this when you signup."
+  },
+  {
+    id: 4,
+    headingText: "Is my financial data secure with Budgetify?",
+    subText: "Absolutely. We take data security seriously. Your financial information is encrypted and stored on secure servers. You can trust that your financial data is safe and confidential while using Budgetify.."
+  },
+]
