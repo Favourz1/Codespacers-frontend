@@ -52,7 +52,7 @@ export default function Signup() {
       navigate("/u/dashboard");
     } catch (err) {
       console.log(err);
-      toast.error("Error Logging In.");
+      toast.error(err?.response.data.message);
     }
     setIsLoading(false);
   }
