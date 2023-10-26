@@ -1,7 +1,7 @@
 import classes from "./styles.module.scss";
 import Button from "@/components/Button";
 import MenuButton from "@/components/MenuButton";
-import { Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { MenuItem } from "@/lib/types";
 import SearchIcon from "@/assets/icons/search-icon.svg";
 import NotificationIcon from "@/assets/icons/notification-icon.svg";
@@ -17,6 +17,7 @@ import ExpenseRecordsActiveIcon from "@/assets/icons/expense-records-active-icon
 import TrackExpenditureIcon from "@/assets/icons/track-expenditures-icon.svg";
 import TrackExpenditureActiveIcon from "@/assets/icons/track-expenditures-active-icon.svg";
 import { ROUTE_KEYS } from "@/lib/constants";
+import BudgetifyBlueLogo from "@/assets/icons/budgetify-logo-blue.svg";
 
 export default function Layout() {
   const { pathname } = useLocation();
@@ -29,7 +30,9 @@ export default function Layout() {
     <div className={classes.wrapper}>
       <aside className={classes.aside}>
         <figure>
-          <h1>Budgetify</h1>
+          <Link to="/">
+            <BudgetifyBlueLogo />
+          </Link>
         </figure>
 
         <nav className={classes.menu_items}>
