@@ -1,6 +1,7 @@
 import { useState } from "react";
 import EyeClosed from "@/assets/icons/eye-closed.svg";
 import EyeOpen from "@/assets/icons/eye-open.svg";
+import { useFormContext } from "react-hook-form";
 
 interface Props extends React.ComponentProps<"input"> {
   label: "" | string;
@@ -10,6 +11,7 @@ interface Props extends React.ComponentProps<"input"> {
   type: "text" | "number" | "email" | "password" | string;
   inputCustomClass?: string;
   containerCustomClass?: string;
+  hasHookForm?: boolean;
 }
 
 const Input = (props: Props) => {
@@ -22,7 +24,11 @@ const Input = (props: Props) => {
     type,
     inputCustomClass,
     containerCustomClass,
+    hasHookForm,
   } = props;
+
+  const { register } = useFormContext();
+
   if (type === "password") {
     return (
       <div className={`flex flex-col ${containerCustomClass}`}>
@@ -37,7 +43,8 @@ const Input = (props: Props) => {
             id={id}
             type={seePassword ? "text" : "password"}
             placeholder={placeholder}
-            name={name}
+            // name={name}
+            {...register(name)}
           />
           <span
             className="w-[16px] bg-transparent"
@@ -59,7 +66,8 @@ const Input = (props: Props) => {
           className={`bg-transparent rounded-lg border focus:border-black px-5 py-3 ${inputCustomClass}`}
           type={type}
           placeholder={placeholder}
-          name={name}
+          // name={name}
+          {...register(name)}
         />
       </div>
     );

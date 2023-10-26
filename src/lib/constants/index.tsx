@@ -2,7 +2,7 @@ import FriendsIcon from "@/assets/icons/friends.svg";
 import SaveIcon from "@/assets/icons/save.svg";
 import SecurityIcon from "@/assets/icons/security.svg";
 
-export const API_URL = "https://api.budgetify.com/v1";
+export const API_URL = "https://team-favourz-backend.onrender.com/api/v1/";
 
 export const STORAGE_KEYS = {
   TOKEN: "token",
