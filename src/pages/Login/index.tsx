@@ -10,6 +10,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { api } from "@/lib/api/config";
 import { useState } from "react";
 
+type FormValues = {
+  username: string;
+  password: string;
+  remember_password: boolean;
+};
 const schema = yup.object().shape({
   username: yup.string().trim().required("Username is required"),
   password: yup.string().trim().required("Password is required"),
@@ -28,11 +33,7 @@ export default function Login() {
     formState: { errors },
   } = methods;
 
-  async function handleLoginRequest(data: {
-    username: string;
-    password: string;
-    remember_password: false;
-  }) {
+  async function handleLoginRequest(data: FormValues): Promise<void> {
     // console.log("data", data);
     try {
       setIsLoading(true);
