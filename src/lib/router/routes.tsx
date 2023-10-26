@@ -48,9 +48,9 @@ const ROUTES: RouteObject[] = [
   {
     path: ROUTE_KEYS.ONBOARDING,
     element: (
-      <PrivateRoutes>
+      <PublicRoutes>
         <AuthLayout />
-      </PrivateRoutes>
+      </PublicRoutes>
     ),
     children: AUTH_ROUTES,
   },
