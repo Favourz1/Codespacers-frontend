@@ -1,7 +1,5 @@
 import Button from "@/components/Button";
 import Input from "@/components/Input";
-import { STORAGE_KEYS } from "@/lib/constants";
-import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import BudgetifyBlueLogo from "@/assets/icons/budgetify-logo-blue.svg";
 import { useForm, FormProvider } from "react-hook-form";
@@ -32,12 +30,17 @@ export default function Signup() {
   });
 
   const {
-    register,
     handleSubmit,
     formState: { errors },
   } = methods;
 
-  async function handleRegisterUser(data) {
+  async function handleRegisterUser(data: {
+    fullname: string;
+    username: string;
+    email: string;
+    password: string;
+    remember_password: false;
+  }) {
     // console.log("data", data)
     try {
       setIsLoading(true);

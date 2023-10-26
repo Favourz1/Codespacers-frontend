@@ -24,13 +24,16 @@ export default function Login() {
   });
 
   const {
-    register,
     handleSubmit,
     formState: { errors },
   } = methods;
 
-  async function handleLoginRequest(data) {
-    // console.log("data", data)
+  async function handleLoginRequest(data: {
+    username: string;
+    password: string;
+    remember_password: false;
+  }) {
+    // console.log("data", data);
     try {
       setIsLoading(true);
       const response = await api.post("/auth/login", data);

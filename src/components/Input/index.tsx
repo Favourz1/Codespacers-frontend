@@ -11,7 +11,6 @@ interface Props extends React.ComponentProps<"input"> {
   type: "text" | "number" | "email" | "password" | string;
   inputCustomClass?: string;
   containerCustomClass?: string;
-  hasHookForm?: boolean;
 }
 
 const Input = (props: Props) => {
@@ -24,7 +23,6 @@ const Input = (props: Props) => {
     type,
     inputCustomClass,
     containerCustomClass,
-    hasHookForm,
   } = props;
 
   const { register } = useFormContext();
