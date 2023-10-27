@@ -100,10 +100,12 @@ export default function Signup() {
                 placeholder="Enter Full Name"
                 name="username"
               />
-              {errors.username && (
+              {errors.username ? (
                 <span className="text-red-500 text-sm">
                   {errors?.username?.message}
                 </span>
+              ) : (
+                <span className="text-sm">Username is case sensitve</span>
               )}
             </div>
             <div>
