@@ -39,7 +39,8 @@ export default function Login() {
       setIsLoading(true);
       const response = await api.post("/auth/login", data);
       console.log(response.data);
-      toast.success("Logged In Successfully.");
+      await toast.success("Logged In Successfully.");
+      window.localStorage.setItem("token", "token");
       navigate("/u/dashboard");
     } catch (err) {
       console.log(err);
