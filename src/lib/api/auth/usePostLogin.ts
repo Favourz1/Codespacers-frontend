@@ -18,7 +18,7 @@ export default function usePostLogin() {
     isMutating: isLoggingin,
     error,
     data,
-  } = useSWRMutation("/login", fetcher);
+  } = useSWRMutation("/onbaording/login", fetcher);
 
   useEffect(() => {
     if (error) message.error(error.response.data.message);
